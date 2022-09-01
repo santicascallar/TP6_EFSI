@@ -24,7 +24,7 @@ const Home = () => {
 
       {Personas.map((personas) => 
       <li key={personas.id}>{personas.nombre} {personas.apellido} 
-      <button onClick={()=>redirigir('PersonaDetalle')}>Detalles</button></li>)}
+      <button onClick={()=>redirigir(`PersonaDetalle/${personas.id}`)}>Detalles</button></li>)}
 
     </div>
   );
