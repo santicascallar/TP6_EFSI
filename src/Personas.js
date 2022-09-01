@@ -1,4 +1,4 @@
-export default Personas = [
+let Personas = [
   {
     "id":"1",
     "nombre":"Sinclair",
@@ -417,6 +417,8 @@ export default Personas = [
     "nombre":"Roth",
     "apellido":"Kilmary",
     "email":"rkilmary1n@businessinsider.com",
-    "edad":"48"
+    "edad":"48",
   },
 ];
+
+export default Personas;

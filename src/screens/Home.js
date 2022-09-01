@@ -1,20 +1,33 @@
 import React from 'react'
-import { Link,useNavigate   } from "react-router-dom";
+import { useState } from 'react';
+import { Link,useNavigate} from "react-router-dom";
+import Personas from '../Personas';
+import Persona from '../components/Persona';
 
-export default function Home() {
+const Home = () => {
   let navigate = useNavigate();
+
+  const [personas, setPersonas] = useState([Personas])
 
   const redirigir = (url)=>{
     navigate(url);
   }
 
-  return (
-    <>
-      <div>Home</div>
-      <button onClick={()=>redirigir('contacto')}>Ir a Contacto</button>
-      <button onClick={()=>redirigir('detalle')}>Ir a Detalle</button>
-      <Link to='/contacto'>ir a contacto</Link>
-    </>
-  )
-}
+  //<Link to="/home">Home</Link>
 
+  return (
+      <div>
+        Menu de Navegacion:
+        
+      <button onClick={()=>redirigir('Estadisticas')}>Estadisticas</button>
+      <button onClick={()=>redirigir('PaginaContacto')}>Pagina de Contacto</button>
+
+      {Personas.map((personas) => 
+      <li key={personas.id}>{personas.nombre} {personas.apellido} 
+      <button onClick={()=>redirigir('PersonaDetalle')}>Detalles</button></li>)}
+
+    </div>
+  );
+};
+
+export default Home;
