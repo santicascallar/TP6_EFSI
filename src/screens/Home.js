@@ -1,13 +1,9 @@
 import React from 'react'
-import { useState } from 'react';
-import { Link,useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import Personas from '../Personas';
-import Persona from '../components/Persona';
 
 const Home = () => {
   let navigate = useNavigate();
-
-  const [personas, setPersonas] = useState([Personas])
 
   const redirigir = (url)=>{
     navigate(url);

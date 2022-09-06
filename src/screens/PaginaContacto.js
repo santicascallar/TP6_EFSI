@@ -1,20 +1,29 @@
 import React from 'react'
-import { useState } from 'react';
-import { Link,useNavigate} from "react-router-dom";
 
 const PaginaContacto = () => {
-  let navigate = useNavigate();
-
-  const redirigir = (url)=>{
-    navigate(url);
-  }
 
   return (
       <div>
-
-      <h1>ok</h1>
-
-    </div>
+        <form>
+          <label placeholder='Nombre'>
+            Nombre:
+            <input type="text" name="name" />
+          </label>
+          <label placeholder='Apellido'>
+            Apellido:
+            <input type="text" name="name" />
+          </label>
+          <label placeholder='Email'>
+            Email:
+            <input type="text" name="name" />
+          </label>
+          <label placeholder='Edad'>
+            Edad:
+            <input type="number" name="name" />
+          </label>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
   );
 };
 
